@@ -1,0 +1,10 @@
+<div class="garage_sales_index">
+   <% @sales.each do |sale| %>
+        <li><%= image_tag sale.photo.url(:thumb) %> <%= link_to sale.title, sale_path(sale) %> <%= sale.address %>
+          <%= sale.city %>
+         <%# =image_tag sale.photo_file_name.url(:thumb) %>
+          <%= sale.description %>
+          <%= sale.date %>
+        </li><br>
+  <% end %>
+</div>
